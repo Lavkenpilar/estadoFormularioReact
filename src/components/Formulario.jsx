@@ -3,8 +3,13 @@ import { useState } from 'react'
 const Formulario = () => {
     const [nombre, setNombre] = useState ("")
 
-    const validarInput = () => {
-        alert ('evento form')
+    const validarInput = (e) => {
+        // prevenimos el  comportamiento por defecto
+        e.preventDefault()
+        //Validación input
+        if (nombre==='') {
+        alert ('debes agregar tu nombre')
+    }
     }
 
   return (
