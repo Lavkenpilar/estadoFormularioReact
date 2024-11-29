@@ -1,13 +1,13 @@
-import React from 'react'
 import { useState } from 'react'
 
 const Formulario = () => {
-    const [nombre, setNombre]= useState ("")
+    const [nombre, setNombre] = useState ("")
   return (
     
    <form>
+    <h3>{nombre}</h3>
     <div className='form-group'>
-    <input className='form-control' name = "Nombre" onChange={(e) => console.log(e.target.value)}/>
+    <input className='form-control' name = "Nombre" onChange={(e) => setNombre(e.target.value)}/>
     <button className='btn btn-dark mt-3'   type='submit'>Enviar</button>
     </div>
     </form>
